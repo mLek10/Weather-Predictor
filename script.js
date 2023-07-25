@@ -1,4 +1,4 @@
-const apiKey = '1fc4b31d67d8d0207c46a74601afe1c2';
+const apiKey = '3f8f33424ba5d8a067ad97163635ccf3';
 const searchBtn = document.getElementById('search-btn');
 const cityInput = document.getElementById('city-input');
 const weatherInfoContainer = document.getElementById('weather-info');
@@ -13,7 +13,7 @@ searchBtn.addEventListener('click', () => {
 });
 
 function getWeatherData(city) {
-    const apiUrl = `api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=1fc4b31d67d8d0207c46a74601afe1c2`;
+    const apiUrl = `api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3f8f33424ba5d8a067ad97163635ccf3`;
 
     fetch(apiUrl)
         .then(response => response.json())
