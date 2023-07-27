@@ -3,7 +3,7 @@ const searchBtn = document.getElementById('search-btn');
 const cityInput = document.getElementById('city-input');
 const baseUrl = "https://api.openweathermap.org/data/2.5/"
 //weather?units=imperial&lat=38.6270&lon=90.1994";
-const geoUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
+const geoUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
 //{city name},{state code},{country code}&limit={limit}&appid={API key}"
 
 // Function to save the searched city in local storage
