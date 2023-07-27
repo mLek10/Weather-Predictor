@@ -19,15 +19,7 @@ h1 {
     padding: 5px 10px;
 }
 
-.weather h1{
-    font-size: 80px;
-    font-weight: 500;
-}   
-.weather h2{
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
-}
+
 .details{
     display: flex;
     align-items: center;
@@ -44,4 +36,28 @@ h1 {
 .humidity, .wind{
     font-size: 28px;
     margin-top: -6px;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.forecast-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Adjust the layout for small screens */
+@media screen and (max-width: 768px) {
+    .forecast-container {
+        flex-direction: column;
+    }
 }
