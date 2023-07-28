@@ -6,9 +6,19 @@ body {
 h1 {
     margin-top: 20px;
 }
-
+h2{
+    font-size: 25px;
+    text-decoration: underline;
+}
 #search-container {
     margin-top: 20px;
+}
+#weatherContainer {
+    max-height: 500px; /* Adjust the height to your desired value */
+}
+
+.btn-container {
+    margin-top: 10px; /* Add some spacing at the top of the button */
 }
 
 #city-input {
@@ -18,7 +28,18 @@ h1 {
 #search-btn {
     padding: 5px 10px;
 }
+#sideBar ul {
+    list-style: none;
+    padding: 0;
+}
 
+#sideBar li {
+    cursor: pointer;
+}
+
+#sideBar li:hover {
+    background-color: #f1f1f1;
+}
 
 .details{
     display: flex;

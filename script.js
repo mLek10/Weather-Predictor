@@ -18,25 +18,24 @@ function saveCityToLocalStorage(city) {
 // Function to load the saved cities from local storage and display them in the "Search Cities" box
 function loadSearchedCities() {
     let cities = JSON.parse(localStorage.getItem("searchedCities")) || [];
-    const sideBar = document.getElementById("sideBar");
-    sideBar.innerHTML = "<h2>Search History</h2>";
-    const ul = document.createElement("ul");
+    const searchHistoryList = document.getElementById("searchHistoryList");
+    searchHistoryList.innerHTML = ""; // Clear previous content
+
     cities.forEach(city => {
         const li = document.createElement("li");
         li.textContent = city;
-        ul.appendChild(li);
-    });
-    sideBar.appendChild(ul);
-        // Add click event listener to search history elements here, to display weather data again when clicked
-        ul.addEventListener("click", function (event) {
-            if (event.target.tagName === "LI") {
-                const city = event.target.textContent;
-                cityInput.value = city;
-                handleSearch();
-            }
+        li.classList.add("searched-city-item"); // Add a class to the list item
+        searchHistoryList.appendChild(li);
+
+        // Add click event listener to each search history item
+        li.addEventListener("click", function (event) {
+            const city = event.target.textContent;
+            cityInput.value = city;
+            handleSearch();
         });
-    
+    });
 }
+
 
 async function getWeatherData(city) {
 
@@ -175,5 +174,6 @@ function displayForecast(data) {
         forecastContainer.appendChild(forecastCard);
     }
 }
+
 searchBtn.addEventListener("click", handleSearch);
 window.addEventListener("load", loadSearchedCities);

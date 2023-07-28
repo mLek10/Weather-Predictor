@@ -15,7 +15,7 @@
     <header>
         <h1>Weather Predictions</h1>
         <main class="container">
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div class="col-6">
                     <div class="input-group mb-3">
                         <input type="text" id="city-input" class="form-control" placeholder="Enter a city">
@@ -26,14 +26,18 @@
         </main>
     </header>
     <main class="container">
-        <div class="weather row" style="border: 1px solid black">
-            <div class="col-6" id="sideBar">
+        <div class="row justify-content-center align-items-center"></div>
+        <div class="weather row">
+            <div class="col-3" id="sideBar">
                 <h2>Search History</h2>
-                <!-- Your search history elements can go here -->
+                <ul id="searchHistoryList">
+                    <!-- Display search history items here dynamically using JavaScript -->
+                </ul>
             </div>
-            <div class="col-6" id="weatherContainer">
+            <div class="col-2" id="weatherContainer">
                 <!-- Current weather card will be appended here -->
             </div>
+        </div>
             <div class="col-12 forecast-container" id="forecastContainer">
                 <!-- Forecast cards will be appended here -->
             </div>
